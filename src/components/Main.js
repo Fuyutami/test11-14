@@ -37,7 +37,7 @@ export default Main
 
 const clickHandler = (canvas) => {
 	axios
-		.post('/sdapi/v1/txt2img', payload)
+		.post('http://127.0.0.1:7860/sdapi/v1/txt2img', payload)
 		.then(function (response) {
 			const image = new Image()
 			image.src = `data:image/png;base64,${response.data.images[0]}`
